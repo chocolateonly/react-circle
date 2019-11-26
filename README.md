@@ -27,7 +27,9 @@ ReactCircle is opinionated and comes with default size and colors, just pass the
 import Circle from 'react-circle';
 
 <Circle
+  name={'gradientName'}
   progress={35}
+  processGradient={['#ff695b','#3ccc79']} 
 />
 ```
 
@@ -47,7 +49,11 @@ import Circle from 'react-circle';
   size="100" // String: Defines the size of the circle.
   lineWidth="25" // String: Defines the thickness of the circle's stroke.
   progress="0" // String: Update to change the progress and percentage.
-  progressColor="rgb(76, 154, 255)" // String: Color of "progress" portion of circle.
+//mark
+  name={'gradientName'} //one Circle,one name,name unique
+  //progressColor="rgb(76, 154, 255)" // String: Color of "progress" portion of circle.
+  processGradient={['#ff695b','#3ccc79']}  //add gradient --mark:this is added, when you set processGradient you need not set progressColor
+//----  
   bgColor="#ecedf0" // String: Color of "empty" portion of circle.
   textColor="#6b778c" // String: Color of percentage text color.
   textStyle={{
@@ -56,7 +62,7 @@ import Circle from 'react-circle';
   percentSpacing={10} // Number: Adjust spacing of "%" symbol and number.
   roundedStroke={false} // Boolean: Rounded/Flat line ends
   showPercentage={true} // Boolean: Show/hide percentage.
-  showPercentageSymbol={true} // Boolean: Show/hide only the "%" symbol.
+  showPercentageSymbol={true} // Boolean: Show/hide only the "%" symbol. 
 />
 ```
 
